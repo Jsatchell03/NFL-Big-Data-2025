@@ -67,6 +67,7 @@ def animatePlay(gameId, playId):
         playerPlots[str(name)] = ax.scatter([start_x], [start_y], c=colors[club][0], s=100)
         coords = group.sort_values('frameId')[['x', 'y']].values
         playerLocations[str(name)] = coords
+
     totalFrames = len(list(playerLocations.values())[0])
     def animate(frame):
         for nflId, scatter in playerPlots.items():
@@ -105,5 +106,5 @@ def animatePlay(gameId, playId):
 
     
 
-
-animatePlay(2022091103, 3505)
+#
+animatePlay(2022091200,64)
